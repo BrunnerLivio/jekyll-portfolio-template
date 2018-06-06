@@ -1,0 +1,33 @@
+{% if page.primary_color and page.secondary_color %} {% assign style = 'background:' | append: page.primary_color | append:
+'; background: -moz-linear-gradient(left,#' | append: page.primary_color | append: ' 0%, #' | append: page.secondary_color
+| append: ' 100%); background: -webkit-linear-gradient(left, #' | append: page.primary_color | append: ' 0%,#' | append:
+page.secondy_color | append: ' 100%); background: linear-gradient(to right, #' | append: page.primary_color | append: ' 0%,#'
+| append: page.secondary_color | append: ' 100%);' %} {% else %} {% assign style = 'background: #' | append: page.primary_color | append: ';'
+%} {% endif %}
+
+{% if page.font_color %}
+  {% assign title_style = 'color: #' | append: page.font_color | append: ';' %}
+{% endif %}
+<header class="main-header" style="{{ style }}">
+  <div class="back col-md-offset-3">
+    <a href="/">
+      <i class="material-icons md-18" style="{{ title_style }}">arrow_back</i>
+    </a>
+  </div>
+  <section class="main-header-container row center-xs middle-xs">
+    <h1 style="{{ title_style }}">
+      {{ page.title }}
+    </h1>
+  </section>
+  <section class="btn-row row center-xs middle-xs">
+    {% if page.sourceCode %}
+      <a class="btn btn-accent" href="{{ page.sourceCode }}">Code</a>
+    {% endif %}
+    {% if page.wiki %}
+      <a class="btn btn-accent" href="{{ page.wiki }}">Wiki</a>
+    {% endif %}
+    {% if page.demo %}
+      <a class="btn btn-accent" href="{{ page.demo }}">Demo</a>
+    {% endif %}
+  </section>
+</header>

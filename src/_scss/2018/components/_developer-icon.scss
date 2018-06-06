@@ -1,0 +1,12 @@
+.developer-icon {
+    margin-top: 10px;
+    margin-right: 10px;
+    .developer-icon-image{
+        font-size: 30px;
+        color: $accent-color;
+        @media only screen and (min-width: $md) {
+            text-align: right;
+        }
+        text-align: center;
+    }
+}

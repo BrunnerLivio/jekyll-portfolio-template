@@ -1,0 +1,27 @@
+defaults:
+  -
+    scope:
+      path: "_posts"
+      type: "pages"
+    values:
+      layout: "2018/detail"
+excerpt_separator: <!--more-->
+exclude:
+  - Makefile
+  - README.md
+  - CONTRIBUTING.md
+  - Gemfile
+  - Gemfile.lock
+  - package.json
+  - .babelrc
+  - yarn.lock
+  - package-lock.json
+  - webpack.config.js
+  - node_modules
+keep_files:
+  - bundle.js
+destination: dist
+source: src
+sass:
+  sass_dir: css/2018
+languages: ["en", "de"]

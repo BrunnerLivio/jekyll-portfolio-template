@@ -1,0 +1,15 @@
+<div class="column post-content">
+    <h2 class="first-xs">
+        <a href="{{ url }}">
+        {{ post.title }}
+        </a>
+    </h2>
+    {% if post.excerpt %}
+    <p>
+        {{ post.excerpt }}
+    </p>
+    {% endif %}
+    <p>
+        <a class="btn" href="{{ url }}">Read more</a>
+    </p>
+</div>

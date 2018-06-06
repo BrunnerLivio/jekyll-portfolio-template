@@ -1,0 +1,46 @@
+<div class="developer-icon column end-xs">
+    {% assign ref = technology | downcase %}
+    {% case ref %}
+        {% when 'ecmascript 6' %}
+            {% assign icon = 'javascript-plain' %}
+        {% when 'angularjs' %}
+        {% when 'angular 5' %}
+            {% assign icon = 'angularjs-plain' %}
+        {% when 'sass' %}
+            {% assign icon = 'sass-original' %}
+        {% when 'python' %}
+            {% assign icon = 'python-plain' %}
+        {% when 'postgresql' %}
+            {% assign icon = 'postgresql-plain' %}
+        {% when 'babel' %}
+            {% assign icon = 'babel-plain' %}
+        {% when 'debian' %}
+            {% assign icon = 'debian-plain' %}
+        {% when 'docker' %}
+            {% assign icon = 'docker-plain' %}
+        {% when 'nodejs' %}
+            {% assign icon = 'nodejs-plain' %}
+        {% when 'typescript' %}
+            {% assign icon = 'typescript-plain' %}
+        {% when 'trello' %}
+            {% assign icon = 'trello-plain' %}
+        {% when 'webpack' %}
+            {% assign icon = 'webpack-plain' %}
+        {% when 'slack' %}
+            {% assign icon = 'slack-plain' %}
+        {% when 'gulp' %}
+            {% assign icon = 'gulp-plain' %}
+        {% when 'gitlab' %}
+            {% assign icon = 'gitlab-plain' %}
+        {% when 'express' %}
+            {% assign icon = 'express-original' %}
+        {% when 'mocha' %}
+            {% assign icon = 'mocha-plain' %}
+        {% when 'd3' %}
+        {% when 'd3.js' %}
+            {% assign icon = 'd3js-plain' %}
+    {% endcase %}
+    <span class="hint--left" aria-label="{{ technology }}">
+        <i class="developer-icon-image devicon-{{ icon }}"></i>
+    </span>
+</div>

@@ -1,0 +1,16 @@
+{% if alternate == 0 %}
+    {% assign class = 'post-alternate' %}
+{% else %}
+    {% assign class = '' %}
+{% endif %}
+{% assign url = site.baseurl | append: post.url %}
+<section class="fade-in card {{ class }} post col-md-8 col-xs-10 row start-xs">
+    {% if alternate == 0 %}
+        {% include 2018/post/content.html  post=post url=url%}
+        {% include 2018/post/preview-image.html post=post %}
+    {% else %}
+        {% include 2018/post/preview-image.html post=post %}
+        {% include 2018/post/content.html  post=post url=url%}
+    {% endif %}
+</section>
+

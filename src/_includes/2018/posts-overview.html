@@ -1,0 +1,8 @@
+<main class="posts-overview container">
+  <div class="row posts-overview-content center-xs">
+    {% for post in site.posts %}
+    {% assign alternate = forloop.index | modulo: 2 %}
+    {% include 2018/post/post.html alternate=alternate post=post site=site%}
+    {% endfor %}
+  </div>
+</main>

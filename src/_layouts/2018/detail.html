@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% include 2018/head.html page=page %}
+</head>
+
+<body>
+    {% include 2018/detail-header.html page=page %}
+    <section class="row detail-container center-xs">
+        <aside class="col-md-3 col-xs-12">
+            <ul class="row center-xs">
+                {% for technology in page.technologies %}
+                    <li class="col-md-12 col-xs-2">{% include 2018/developer-icon.html technology=technology %}</li>
+                {% endfor %}
+            </ul>
+        </aside>
+        <main class="col-md-6 col-xs-12 detail-card fade-in fade-in-negative card start-xs">
+            {{ content }}
+        </main>
+        <aside class="col-md-3 col-xs-12 first-xs last-md right-nav start-xs"></aside>
+    </section>
+    {% include 2018/scripts.html %}
+</body>
+
+</html>

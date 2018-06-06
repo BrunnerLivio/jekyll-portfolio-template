@@ -1,0 +1,25 @@
+.btn {
+    width: 120px;
+    margin: 20px;
+    padding: 14px 0;
+    box-shadow: $shadow;
+    text-transform: uppercase;
+    border: 0;
+    font-family: 'Roboto', sans-serif;
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-weight: bold;
+    font-size: 16px;
+    display: block;
+    text-decoration: none;
+    background: $primary-color;
+    text-shadow: 0 1px 3px transperentize($primary-color, 0.6);
+    text-align: center;
+    &:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
+    }
+    &-accent {
+        background: $accent-color;
+        text-shadow: 0 1px 3px transperentize($accent-color, 0.6);
+    }
+}

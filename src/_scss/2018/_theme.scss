@@ -1,0 +1,77 @@
+body {
+    background: $background;
+    font-family: 'Raleway', sans-serif;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Raleway', sans-serif;
+    color: $title-color;
+    padding-bottom: 10px;
+    @media only screen and (min-width: $md) {
+        padding-bottom: 20px;
+    }
+}
+
+h2 {
+    font-size: 20px;
+    @media only screen and (min-width: $md) {
+        font-size: 24px;
+    }
+}
+
+p {
+    color: $text-color;
+    font-size: 16px;
+    margin-bottom: 10px;
+    line-height: 16 * 1.618px;
+    a[href*="#source-"] {
+        font-size: 12px;
+        position: relative;
+        top: -4px;
+    }
+}
+
+a{
+    color: #4fc3f7;
+    &:visited {
+        color: #03a9f4;
+    }
+}
+
+strong {
+    font-weight: bold;
+}
+
+.fade-in {
+    position: relative;
+    top: 40px;
+    opacity: 0;
+    animation: fadein 0.75s ease-in-out forwards;
+    &.fade-in-negative {
+        animation: fadein-negative 0.75s ease-in-out forwards;
+    }
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+        top: 40px;
+    }
+    to {
+        opacity: 1;
+        top: 0px;
+    }
+}
+
+@keyframes fadein-negative {
+    from {
+        opacity: 0;
+        top: 40px;
+    }
+    to {
+        opacity: 1;
+        top: -40px;
+    }
+}

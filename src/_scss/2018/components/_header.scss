@@ -1,0 +1,85 @@
+$logo_width_md: 400px;
+$logo_width_xs: 300px;
+.main-header {
+    width: 100%;
+    height: 250px;
+    background: $primary-color;
+    background: -moz-linear-gradient(left, $primary-color 0%, $secondary-color 100%);
+    background: -webkit-linear-gradient(left, $primary-color 0%, $secondary-color 100%);
+    background: linear-gradient(to right, $primary-color 0%, $secondary-color 100%);
+    position: relative;
+    overflow-x: none;
+    &-container {
+        width: 100%;
+    }
+
+    h1 {
+        @media only screen and (min-width: $md) {
+            font-size: 40px;
+            margin-top: 20px;
+        }
+        margin-top: 55px;
+        font-size: 30px;
+        color: white;
+        width: 100%;
+        font-family: 'Raleway', sans-serif;
+    }
+    .btn-row {
+        width: 100%;
+        @media print {
+            display: none;
+        }
+    }
+    .logo {
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 40px;
+        text-align: center;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .search-bar-container {
+        position: relative;
+        top: -30px;
+        width: 100%;
+    }
+    .back {
+        padding-left: 30px;
+        @media only screen and (min-width: $md) {
+            padding-left: 0;
+        }
+        .material-icons {
+            color: white;
+            font-size: 30px;
+        }
+        position: relative;
+        top: 30px;
+        @media print {
+            display: none;
+        }
+    }
+
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        height: 100px;
+        width: 30%;
+        top: 0px;
+        background: $secondary-color;
+        transform: skew(30deg);
+        right: 76px;
+    }
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        height: 100px;
+        width: 30%;
+        bottom: 0px;
+        background: $primary-color;
+        transform: skew(30deg);
+        left: -50px;
+    }
+}

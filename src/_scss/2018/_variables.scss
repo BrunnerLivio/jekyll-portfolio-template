@@ -1,0 +1,17 @@
+$background: #F6F9FC;
+
+$text-color: rgba(0, 0, 0, 0.8);
+$title-color: rgba(0, 0, 0, 0.4);
+$weaken-color: rgba(0, 0, 0, 0.35);
+
+$primary-color: #4fc3f7;
+$secondary-color: #03a9f4;
+$accent-color: rgb(36,180,126);
+
+$sm: 48em;
+$md: 64em;
+$lg: 75em;
+$break-sm: only screen and (min-width: $sm);
+$break-md: only screen and (min-width: $md);
+$break-lg: only screen and (min-width: $lg);
+$shadow: 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .07);

@@ -1,0 +1,19 @@
+.card {
+    background: white;
+    box-shadow: $shadow;;
+    padding: 20px 20px;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    margin-bottom: 20px;
+    @media only screen and (min-width: $md) {
+        padding: 30px;
+        padding-left: 30px !important;
+        padding-right: 30px !important;
+    }
+    @media print {
+        box-shadow: none;
+    }
+    h2 a {
+        text-decoration: none;
+    }
+}
